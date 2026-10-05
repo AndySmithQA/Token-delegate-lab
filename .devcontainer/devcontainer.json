@@ -1,0 +1,14 @@
+{
+  "name": "Spend less, ship the same",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "workspaceFolder": "${localWorkspaceFolder}/lab/app",
+  "postCreateCommand": "bash ${localWorkspaceFolder}/scripts/prepare-lab.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
+      ]
+    }
+  }
+}
