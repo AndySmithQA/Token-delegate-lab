@@ -79,13 +79,14 @@ Do not open the repository root. Fixtures and the estimator sit next to the app 
 
 ## 6. Confirm Git is rooted in the app
 
-From the `lab/app` terminal:
+Move into the app folder first. Running this from the clone root or from `lab` always prints the clone root.
 
 ```powershell
+cd lab\app
 git rev-parse --show-toplevel
 ```
 
-The printed path must end in `lab\app` or `lab/app`. If it ends in the clone root, run the prepare script again from the repository root.
+The printed path must end in `lab/app`, for example `C:/Token-delegat-lab/lab/app`. If it prints the clone root while you are in `lab\app`, run the prepare script again from the repository root and check it ends with `Preparation finished.`
 
 ## 7. Confirm the starting tests
 
