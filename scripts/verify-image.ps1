@@ -68,8 +68,8 @@ Check "Tests: 1 passing, 2 failing" $testsOk "node --test output did not show 1 
 
 $estimator = Join-Path $root "lab\tools\estimate-tokens.mjs"
 $estimateOutput = (& node $estimator (Join-Path $app ".github\copilot-instructions.md") (Join-Path $root "lab\fixtures\copilot-instructions.bloated.md") 2>&1 | Out-String)
-$estimateOk = $estimateOutput -match 'copilot-instructions\.md\s+\d+\s+\d+\s+40' -and $estimateOutput -match 'copilot-instructions\.bloated\.md\s+\d+\s+\d+\s+2414'
-Check "Estimator about 40 vs 2414" $estimateOk "unexpected estimator output"
+$estimateOk = $estimateOutput -match 'copilot-instructions\.md\s+\d+\s+\d+\s+40' -and $estimateOutput -match 'copilot-instructions\.bloated\.md\s+\d+\s+\d+\s+2378'
+Check "Estimator about 40 vs 2378" $estimateOk "unexpected estimator output"
 
 if ($failed) {
     Write-Host ""

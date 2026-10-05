@@ -235,4 +235,3 @@ References:
 - [Auto model selection](https://docs.github.com/en/copilot/concepts/models/auto-model-selection)
 - [Managing context in Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/context-management)
 - [AI credit session limits](https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/set-session-limit)
-- [github-copilot-token-optimization](https://github.com/olivomarco/github-copilot-token-optimization) (community guide, not official GitHub docs)

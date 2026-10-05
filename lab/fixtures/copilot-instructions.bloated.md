@@ -2,7 +2,7 @@
 
 Anti-pattern, for the end-of-course lab measurement only. Do not leave this file installed.
 
-It inverts output control ("always write a long explanation"), repeats facts the agent can read in the source, and keeps path-specific pricing rules in the always-on file. The app does the opposite, following the layout in the community guide [github-copilot-token-optimization](https://github.com/olivomarco/github-copilot-token-optimization): a few lines in `.github/copilot-instructions.md`, landmines only in `AGENTS.md`, and pricing rules in `.github/instructions/pricing.instructions.md` with `applyTo`.
+It inverts output control ("always write a long explanation"), repeats facts the agent can read in the source, and keeps path-specific pricing rules in the always-on file. The app does the opposite: a few lines in `.github/copilot-instructions.md`, landmines only in `AGENTS.md`, and pricing rules in `.github/instructions/pricing.instructions.md` with `applyTo`.
 
 You are an assistant embedded in AndyCorp Commerce, a fictional retailer used for training. This document is deliberately long. It exists so the lab can measure how many tokens a noisy instructions file adds to every turn.
 

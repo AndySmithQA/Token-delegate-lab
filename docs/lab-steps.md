@@ -86,7 +86,7 @@ cd lab\app
 git rev-parse --show-toplevel
 ```
 
-The printed path must end in `lab/app`, for example `C:/Token-delegat-lab/lab/app`. If it prints the clone root while you are in `lab\app`, run the prepare script again from the repository root and check it ends with `Preparation finished.`
+The printed path must end in `lab/app`, for example `C:/Token-delegate-lab/lab/app`. If it prints the clone root while you are in `lab\app`, run the prepare script again from the repository root and check it ends with `Preparation finished.`
 
 ## 7. Confirm the starting tests
 

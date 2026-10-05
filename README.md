@@ -71,6 +71,6 @@ node --test
 node ..\tools\estimate-tokens.mjs .github\copilot-instructions.md ..\fixtures\copilot-instructions.bloated.md
 ```
 
-`node --test` must fail two tests and pass one. Quantity 2 returns 108 and the test expects 120. The bloated instructions file must estimate far above the four-line Copilot file (about 2,400 tokens versus about 40).
+`node --test` must fail two tests and pass one. Quantity 2 returns 108 and the test expects 120. The bloated instructions file must estimate far above the four-line Copilot file (about 2,380 tokens versus about 40).
 
 There is no `npm install`. The app has no dependencies.

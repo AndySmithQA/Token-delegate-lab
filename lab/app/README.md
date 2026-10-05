@@ -4,8 +4,6 @@ Order-pricing demo for the Copilot token course. No dependencies. One pricing te
 
 Open **this folder** in VS Code and as the working directory for Copilot CLI. It needs to be a Git repository (`git init` once) or Copilot CLI will not load `.github/copilot-instructions.md`. On this CLI, `/context` counts that file inside System/Tools. `/instructions` lists the loaded files.
 
-The layout follows the community guide [github-copilot-token-optimization](https://github.com/olivomarco/github-copilot-token-optimization). That guide is field experience, not official GitHub documentation.
-
 | File | When Copilot pays for it |
 | --- | --- |
 | `.github/copilot-instructions.md` | Every Copilot turn. Output control only: code only, bullets, explain when asked. |

@@ -70,10 +70,10 @@ else
 fi
 
 estimate_output="$(node "$root/lab/tools/estimate-tokens.mjs" "$app/.github/copilot-instructions.md" "$root/lab/fixtures/copilot-instructions.bloated.md" 2>&1 || true)"
-if [[ "$estimate_output" == *" 40"* ]] && [[ "$estimate_output" == *" 2414"* ]]; then
-  check "Estimator about 40 vs 2414" 0 ""
+if [[ "$estimate_output" == *" 40"* ]] && [[ "$estimate_output" == *" 2378"* ]]; then
+  check "Estimator about 40 vs 2378" 0 ""
 else
-  check "Estimator about 40 vs 2414" 1 "unexpected estimator output"
+  check "Estimator about 40 vs 2378" 1 "unexpected estimator output"
 fi
 
 if [[ "$failed" -ne 0 ]]; then
