@@ -2,9 +2,5 @@
   "name": "andycorp-lite",
   "private": true,
   "type": "module",
-  "description": "Sample order-pricing app for the Copilot token lab. No dependencies.",
-  "scripts": {
-    "start": "node src/index.js",
-    "test": "node --test"
-  }
+  "description": "Sample order-pricing app. No dependencies. Run tests with node --test. Do not use npm."
 }

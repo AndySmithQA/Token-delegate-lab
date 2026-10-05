@@ -59,7 +59,9 @@ git --version
 copilot --version
 ```
 
-`node --version` must be v22 or higher. If `copilot` is not found, open a new terminal. On Windows the install command is `winget install GitHub.Copilot`. Then open another new terminal and try again.
+`node --version` must be v22 or higher. If `copilot` is not found, open a new terminal. On Windows the install command is `winget install GitHub.Copilot`. Quit VS Code completely, open it again, then open a new terminal and try again. A terminal that was already open does not see the new command.
+
+Type lab instructions in that `copilot` terminal. If VS Code Chat offers to install the CLI with npm, decline it. That install is a second copy. It is not required, and it leads the agent to run `npm install` and `npm --test`. The test command in this lab is `node --test`.
 
 ## 4. Sign in to Copilot
 
@@ -368,7 +370,8 @@ Submit `delegate/scorecard.md` by the route on the root README. Do not submit se
 
 | What you see | What to do |
 | --- | --- |
-| `copilot` is not recognised | Open a new terminal. Install with `winget install GitHub.Copilot`, or `npm install -g @github/copilot`. |
+| `copilot` is not recognised | Quit VS Code, reopen it, then open a new terminal. Install with `winget install GitHub.Copilot`. |
+| VS Code asks to install the CLI, then runs `npm install` or `npm --test` | Decline that install. The winget CLI is already the one this lab uses. Run `node --test`. |
 | Browser login loops | Run `copilot login` again. Use an account that has a Copilot licence. |
 | `/instructions` lists nothing | The Git root is not `lab/app`. From the clone root, run the prepare script, then start `copilot` from `lab/app`. |
 | All tests pass at step 7 | `src/pricing.js` was already fixed. Get a fresh clone. |

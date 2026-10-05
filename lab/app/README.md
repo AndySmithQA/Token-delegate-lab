@@ -24,4 +24,6 @@ node src/index.js
 node --test
 ```
 
+`package.json` exists only so Node loads these files as ES modules. There is no npm install and no npm test script. If VS Code offers to install the Copilot CLI with npm, decline it. The lab uses the `copilot` command from `winget install GitHub.Copilot`, in a terminal opened after that install.
+
 Course steps: `docs/lab-steps.md` in the repository root.
