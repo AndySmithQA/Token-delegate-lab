@@ -35,6 +35,24 @@ if (-not (Get-Command copilot -ErrorAction SilentlyContinue)) {
     Write-Warning "copilot is not on PATH. Install GitHub Copilot CLI, open a new terminal, then run: copilot login"
 }
 
+$gitlink = (& git -C $root ls-files -s -- "lab/app" 2>$null | Out-String)
+if ($gitlink -match '^160000') {
+    Fail "lab\app was stored as a nested Git repository, so this clone did not download the sample app. Pull the latest course repository, where lab\app is normal files, and clone again."
+}
+
+if (-not (Test-Path -LiteralPath $pricing)) {
+    Fail "lab\app\src\pricing.js is missing. Clone the repository again. The sample app files should be in lab\app."
+}
+
+if (-not (Test-Path -LiteralPath $instructions)) {
+    if (-not (Test-Path -LiteralPath $lean)) {
+        Fail "Could not find $instructions or the lean fixture at $lean."
+    }
+    New-Item -ItemType Directory -Force -Path (Split-Path -Parent $instructions) | Out-Null
+    Copy-Item -LiteralPath $lean -Destination $instructions -Force
+    Write-Host "Restored the four-line Copilot instructions file."
+}
+
 $currentInstructions = Get-Content -LiteralPath $instructions -Raw
 if ($currentInstructions -notmatch '(?m)^Code only, no explanation\.') {
     Copy-Item -LiteralPath $lean -Destination $instructions -Force

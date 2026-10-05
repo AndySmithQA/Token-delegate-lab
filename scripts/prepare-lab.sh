@@ -41,6 +41,26 @@ if ! command -v copilot >/dev/null 2>&1; then
   fi
 fi
 
+if git -C "$root" ls-files -s -- "lab/app" 2>/dev/null | grep -q '^160000'; then
+  echo "lab/app was stored as a nested Git repository, so this clone did not download the sample app. Pull the latest course repository, where lab/app is normal files, and clone again." >&2
+  exit 1
+fi
+
+if [[ ! -f "$pricing" ]]; then
+  echo "lab/app/src/pricing.js is missing. Clone the repository again. The sample app files should be in lab/app." >&2
+  exit 1
+fi
+
+if [[ ! -f "$instructions" ]]; then
+  if [[ ! -f "$lean" ]]; then
+    echo "Could not find $instructions or the lean fixture at $lean." >&2
+    exit 1
+  fi
+  mkdir -p "$(dirname "$instructions")"
+  cp "$lean" "$instructions"
+  echo "Restored the four-line Copilot instructions file."
+fi
+
 if ! grep -q '^Code only, no explanation\.' "$instructions"; then
   cp "$lean" "$instructions"
   echo "Restored the four-line Copilot instructions file."

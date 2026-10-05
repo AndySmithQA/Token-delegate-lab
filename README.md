@@ -41,6 +41,8 @@ bash scripts/prepare-lab.sh
 
 Then open `lab/app` in VS Code. Do not open the repository root as the Copilot workspace.
 
+The prepare script creates a local Git repository inside `lab/app` so Copilot can load the instruction files. That inner repository stays on the delegate machine. The sample app itself is stored as normal files in this repository.
+
 ## Layout
 
 ```text
